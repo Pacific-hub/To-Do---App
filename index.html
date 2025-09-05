@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awesome To-Do — Reminders & Alarms</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <img class="logo" src="images/icon (2).jpeg" alt="app icon">
+      <div class="title-group">
+        <h1>Awesome To-Do</h1>
+        <p class="subtitle">“Because your brain deserves a backup — and a laugh.” 😄</p>
+      </div>
+    </header>
+
+    <main class="todo-app">
+      <section class="input-row">
+        <input id="input-box" type="text" placeholder="Add a task (e.g., Buy milk)" aria-label="New task">
+        <input id="reminder" type="datetime-local" aria-label="Reminder time">
+        <button id="add-btn" aria-label="Add task">Add</button>
+      </section>
+
+      <section class="help-line">
+        <small>Tip: set a reminder and the app will notify you with a sound and a giggle.</small>
+      </section>
+
+      <ul id="list-container" aria-live="polite"></ul>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <p id="modal-text"></p>
+      <button id="modal-ok">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
